@@ -1,0 +1,67 @@
+
+    Item {
+        id:fullscreen
+        anchors.fill: parent
+        anchors.margins: 4
+        // todo; there's a state machine here...
+        // if you want to transition between windows FEEL FREE!!
+
+        // blend between 2 pages somehow?
+        Item {
+            id: quiz_screen
+            anchors.fill: parent
+//            anchors.leftMargin: -fullscreen.width
+//            anchors.rightMargin: 0
+            QuizScreen {
+            }
+        }
+
+        // do a countdown - with lights or something
+
+        // "ready" "steady" "go!"
+
+
+        // and then some sort of syncronizer
+
+        // scale and opacity would be nice
+
+        Item {
+        visible:false
+            id: main_menu
+            anchors.fill: parent
+            MainMenu {
+                onGotoPage: {
+                    if (page === 'quiz') {
+                        disappear.start()
+                        // run an animation
+//                        main_menu.anchors.leftMargin = fullscreen.width
+                    }
+
+                    console.log("goto page " + page)
+                }
+            }
+
+            // god damn it - this is going to be buried everywhere - or build a "tab/stack" container and be happy!
+            // that is, wrap everything up nicely - still need object references or at least ref by id.
+        }
+
+        /* this needs to be able to animate any window combo c */
+//        SequentialAnimation {
+        ParallelAnimation {
+            id: disappear
+            // can just set x and y and leave width/height setup properly - this would save some hassle
+            NumberAnimation { target: main_menu; property:'anchors.leftMargin'; from: 0; to: fullscreen.width; duration:2000; /*running: true;*/ /*loops: Animation.Infinite*/}
+            NumberAnimation { target: main_menu; property:'anchors.rightMargin'; from: 0; to: -fullscreen.width; duration:2000; /*running: true;*/ /*loops: Animation.Infinite*/}
+            NumberAnimation { target: quiz_screen; property:'anchors.leftMargin'; from: -fullscreen.width; to:0; duration:2000; /*running: true;*/ /*loops: Animation.Infinite*/}
+            NumberAnimation { target: quiz_screen; property:'anchors.rightMargin'; from: fullscreen.width; to: 0; duration:2000; /*running: true;*/ /*loops: Animation.Infinite*/}
+        }
+        // putting up multiple screens is easy...
+        /*
+    Rectangle {
+        id: me
+        anchors.fill: parent
+        color:"#ff0000"
+        opacity: 0.5
+        NumberAnimation { target: me; property:'anchors.leftMargin'; from: 0; to:1000; duration:2000; running: true; loops: Animation.Infinite}
+    }
+*/
