@@ -38,17 +38,17 @@ if you've got fifty digit numbers you've already got a LONG carry chain
 Window {
     //footerHeight: 100
 
-    property int ****:2
-    property int current_q: 0
+//    property int ****:2
+//    property int current_q: 0
     visible: true
     width: 640
     height: 480
     title: qsTr("Hello World")
 
-    FontLoader {
-        id: lavi
-        source: "qrc:/fonts/Lavi.ttf"
-    }
+//    FontLoader {
+//        id: lavi
+//        source: "qrc:/fonts/Lavi.ttf"
+//    }
 
     Image {
         anchors.fill: parent
