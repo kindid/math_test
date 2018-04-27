@@ -15,9 +15,9 @@ import QtQuick 2.0
 // might want a HeaderView mate -
 
 Item {
-    id: header
+//    id: header
     // anc.bm - shortcut
-    anchors.bottomMargin: parent.height - 40
+    //anchors.bottomMargin: parent.height - 40
     // bottom bit of screen is the footer (how do you abstract this e.g.
     // make a default layout and then add whatever you like to it?
     // ugly! just a ruler line would be fine
@@ -28,11 +28,44 @@ Item {
         text_score.text = score + '/' + out_of
     }
 
-    // simples
+    // simples - sort of - first thing is a back button
+
+    // now i have a good use for a row layout
+    //  what i want though is the wrap that info in some kinda HeaderItem and
     Row {
         id: header_row
         anchors.fill: parent
+        // todo:make border look good
         anchors.bottomMargin: 6
+
+        Image {
+            source:'qrc:/images/key_bs.png'
+            width: parent.height
+            height: parent.height
+        }
+
+        Image {
+            id: picked_pic
+            source:'qrc:/images/key_blank.png'
+            width: parent.height
+            height: parent.height
+        }
+
+        Rectangle {
+            // strings ARE hell - they need special storage - they really do.
+            id: picked_nick        // id = left... but I is magic... would be :Rectangle:left:[list of stuff in here] UNLESS it's truly primitive like true/false/5/-3.141592653
+            // X13 - would be better as parent.dims * vec2(0.25, 1) OR dims = mul[../dims, vec2:[0.25 1]]
+            width: parent.width * 0.25 * 2
+            height: parent.height
+            color: Qt.rgba(0.8, 0.8, 1, 0.5)
+            Text {
+                anchors.fill: parent
+                text: 'Charlie'
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+                font.pixelSize: height * 0.5
+            }
+        }
         // this won't be rectangles at all - they will be further sub components
         Rectangle {
             // strings ARE hell - they need special storage - they really do.
@@ -48,21 +81,6 @@ Item {
                 //text: Date().toString('yyyy-MM-dd')
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignRight
-                font.pixelSize: height * 0.5
-            }
-        }
-        Rectangle {
-            // strings ARE hell - they need special storage - they really do.
-            id: mid        // id = left... but I is magic... would be :Rectangle:left:[list of stuff in here] UNLESS it's truly primitive like true/false/5/-3.141592653
-            // X13 - would be better as parent.dims * vec2(0.25, 1) OR dims = mul[../dims, vec2:[0.25 1]]
-            width: parent.width * 0.25 * 2
-            height: parent.height
-            color: Qt.rgba(0.8, 0.8, 1, 0.5)
-            Text {
-                anchors.fill: parent
-                text: 'Charlie'
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: height * 0.5
             }
         }

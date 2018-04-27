@@ -5,19 +5,31 @@ import QtQuick.Window 2.10
 import QtQuick.Layouts 1.3
 import QtMultimedia 5.9
 
-
+// put the standard header layout here please.
 Item {
     id:fullscreen
-    // not here - let the thing above lay you out
+    // not here - let the thing above lay you out (thing above is a window ... kinda)
     anchors.fill: parent
 //    anchors.margins: 4
     // todo; there's a state machine here...
     // if you want to transition between windows FEEL FREE!!
 
-
-    ChildPicker {
+    Header {
+        id: header
         anchors.fill: parent
+        anchors.bottomMargin: parent.height - 40
     }
+
+    Item {
+        anchors.fill: parent
+        anchors.topMargin: 40
+        ChildPicker {
+            anchors.fill: parent
+        }
+
+    }
+
+
 
 
 // this needs a header you know...

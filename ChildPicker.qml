@@ -22,9 +22,6 @@ Item {
     }
 
 
-    Header {
-        anchors.fill: parent
-    }
 
     // probably a row
 
