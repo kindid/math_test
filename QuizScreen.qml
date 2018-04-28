@@ -1,7 +1,12 @@
 import QtQuick 2.0
 
 Item {
+    id: quiz_screen
     property string cInput: ''
+
+    function clear_input() {
+        cInput = ''
+    }
 
     // reduce - this is silly
     Item {
@@ -138,6 +143,7 @@ Item {
 
             // refactoring is staggeringly simple
             CalcPad {
+                id: calc_pad
                 anchors.fill: parent
                 anchors.topMargin: parent.height / 2
                 onKey: {
@@ -160,6 +166,8 @@ Item {
                         console.log(parseInt(cInput));
                         console.log(questions.get(current_q).q)
                         console.log(questions.get(current_q).q === parseInt(cInput))
+
+                        // mark and move to next answered or wrong question
 
                         // test
                     } else if (key === '»') {

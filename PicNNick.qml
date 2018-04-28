@@ -19,7 +19,7 @@ import QtQuick.Layouts 1.3
 Item {
     property alias pic: image.source
     property alias nick: text.text
-    signal click(string child)
+    signal click(string pic, string nick)
 //    anchors.fill: parent
 //    anchors.rightMargin: parent.width / 2
     Layout.fillWidth: true
@@ -55,7 +55,7 @@ Item {
             console.log('bah')
             //clicked('nick') // function does not exist. explode
             // calls itself OVER AND OVER again!
-            click(nick)
+            click(pic, nick)
         }
 //            clicked('nick')   // double neat
 //        }

@@ -25,7 +25,7 @@ Item {
             current_sum.b,
             current_sum.answered ? current_sum.user_q : '')
 
-        cInput = ''
+        quiz_screen.clear_input();
     }
 
     function updateCurrentAnswer(text_answer) {
@@ -109,7 +109,8 @@ Item {
                 question_index: index
                 // there's multiple handlers going on here.
                 onClick: {
-                    // turn old one off and turn new one on
+                    setCurrent(qi)
+/*                    // turn old one off and turn new one on
                     // ALSO - Question shouldn't handle any
                     // of the multiplexing at all.
                     if (current_qi >= 0) {
@@ -117,7 +118,7 @@ Item {
                     }
 
                     var current_sum = questions.get(qi);
-
+                    calc_pad.
                     vertical_sum.setSum(
                         current_sum.a,
                         current_sum.b,
@@ -125,7 +126,7 @@ Item {
                     // ****ing A
 //                    questions.get(qi).view_state = 'answered'
                     questions.get(qi).select_state = true
-                    current_qi = qi
+                    current_qi = qi */
                 }
             }
         }

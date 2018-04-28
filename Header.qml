@@ -24,6 +24,11 @@ Item {
     //color:"#00ffff"
     // how much 'weight' do you want at the bottom? (20% would mean 0.2
 
+    function setPicNNick(pic, nick) {
+        picked_pic.source = pic
+        picked_nick.text = nick
+    }
+
     function setScore(score, out_of) {
         text_score.text = score + '/' + out_of
     }
@@ -53,16 +58,16 @@ Item {
 
         Rectangle {
             // strings ARE hell - they need special storage - they really do.
-            id: picked_nick        // id = left... but I is magic... would be :Rectangle:left:[list of stuff in here] UNLESS it's truly primitive like true/false/5/-3.141592653
             // X13 - would be better as parent.dims * vec2(0.25, 1) OR dims = mul[../dims, vec2:[0.25 1]]
             width: parent.width * 0.25 * 2
             height: parent.height
             color: Qt.rgba(0.8, 0.8, 1, 0.5)
             Text {
+                id: picked_nick        // id = left... but I is magic... would be :Rectangle:left:[list of stuff in here] UNLESS it's truly primitive like true/false/5/-3.141592653
                 anchors.fill: parent
                 text: 'Charlie'
                 verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
+                horizontalAlignment: Text.AlignLeft
                 font.pixelSize: height * 0.5
             }
         }

@@ -21,10 +21,14 @@ Item {
     }
 
     Item {
+        id: child_picker
         anchors.fill: parent
         anchors.topMargin: 40
         ChildPicker {
             anchors.fill: parent
+            onPicked: {
+                child_picker.visible = false
+            }
         }
 
     }
