@@ -4,6 +4,7 @@ import QtQuick.Controls 2.2
 import QtQuick.Window 2.10
 import QtQuick.Layouts 1.3
 import QtMultimedia 5.9
+import 'Scenes/MainMenu'
 
 // put the standard header layout here please.
 Item {
@@ -142,6 +143,8 @@ Item {
         }
     }
 
+
+    //
 
     // probably bollocks now - was nice once
 

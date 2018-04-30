@@ -14,7 +14,6 @@
         <file>Sounds.qml</file>
         <file>images/Lenna.png</file>
         <file>sounds/key0.wav</file>
-        <file>CalcButton.qml</file>
         <file>Garbage.qml</file>
         <file>MathQuestion.qml</file>
         <file>QuestionView.qml</file>
@@ -34,7 +33,6 @@
         <file>images/key_0.png</file>
         <file>images/grid.png</file>
         <file>images/question_block.png</file>
-        <file>MainMenu.qml</file>
         <file>CenTex.qml</file>
         <file>MainMenuButton.qml</file>
         <file>ViewTop.qml</file>
@@ -43,7 +41,6 @@
         <file>QuestionModel.qml</file>
         <file>QuizScreen.qml</file>
         <file>images/key_plus_minus.png</file>
-        <file>VerticalSum.qml</file>
         <file>CalcPad.qml</file>
         <file>QuestionListView.qml</file>
         <file>RSG.qml</file>
@@ -61,5 +58,9 @@
         <file>images/menu_button_sub.png</file>
         <file>images/menu_button_tables.png</file>
         <file>PicNNick.qml</file>
+        <file>Components/CalcButton.qml</file>
+        <file>Scenes/MainMenu/MainMenu.qml</file>
+        <file>Components/SumHorizontal.qml</file>
+        <file>Components/SumVertical.qml</file>
     </qresource>
 </RCC>

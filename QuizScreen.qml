@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import 'Components'
 
 Item {
     id: quiz_screen
@@ -123,7 +124,7 @@ Item {
 
             // i want to give this 50% - that's still plenty of range
             // for everything else.
-            VerticalSum {
+            SumVertical {
                 id: vertical_sum
                 anchors.fill: parent
                 anchors.bottomMargin: parent.height * 0.5

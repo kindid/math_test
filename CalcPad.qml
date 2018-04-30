@@ -5,6 +5,8 @@ import QtQuick.Controls 2.2
 //import QtQuick.Layouts 1.3
 import QtMultimedia 5.9
 import QtQuick 2.0
+// wow... it's this easy - it just bring in everything (of course I've no idea how to namespace this lot)
+import 'Components'
 
 Item {
     anchors.fill: parent
