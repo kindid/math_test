@@ -16,7 +16,6 @@
         <file>sounds/key0.wav</file>
         <file>Garbage.qml</file>
         <file>MathQuestion.qml</file>
-        <file>QuestionView.qml</file>
         <file>AnswerBar.qml</file>
         <file>images/key_1.png</file>
         <file>images/key_2.png</file>
@@ -34,21 +33,20 @@
         <file>images/grid.png</file>
         <file>images/question_block.png</file>
         <file>CenTex.qml</file>
-        <file>MainMenuButton.qml</file>
         <file>ViewTop.qml</file>
         <file>Header.qml</file>
         <file>Footer.qml</file>
-        <file>QuestionModel.qml</file>
-        <file>QuizScreen.qml</file>
+        <file>Scenes/QuizScreen/QuestionView.qml</file>
+        <file>Scenes/QuizScreen/QuestionModel.qml</file>
+        <file>Scenes/QuizScreen/QuestionListView.qml</file>
+        <file>Scenes/QuizScreen/QuestionView_copy.qml</file>
+        <file>Scenes/QuizScreen/QuizScreen.qml</file>
         <file>images/key_plus_minus.png</file>
-        <file>CalcPad.qml</file>
-        <file>QuestionListView.qml</file>
+        <file>Components/CalcPad.qml</file>
         <file>RSG.qml</file>
         <file>images/key_play.png</file>
         <file>images/key_round_play.png</file>
-        <file>QuestionView_copy.qml</file>
         <file>images/horizontal_break.png</file>
-        <file>QuestionViewText.qml</file>
         <file>images/key_circle.png</file>
         <file>ChildPicker.qml</file>
         <file>images/willow.jpg</file>
@@ -62,5 +60,7 @@
         <file>Scenes/MainMenu/MainMenu.qml</file>
         <file>Components/SumHorizontal.qml</file>
         <file>Components/SumVertical.qml</file>
+        <file>Components/QuestionViewText.qml</file>
+        <file>Scenes/MainMenu/MainMenuButton.qml</file>
     </qresource>
 </RCC>

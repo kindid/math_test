@@ -1,4 +1,6 @@
 import QtQuick 2.0
+import '../..'
+import '../../Components'
 
 // slight annoyance with Z here - we're a wrapper
 // background first then border
@@ -28,6 +30,8 @@ Item {
 //        z: 100
 //    }
 
+    // right align in row (somehow)
+    // maybe fuck the row thing and just line it up properly
     Item {
         id: mark_background
         x: parent.width - parent.height
@@ -46,7 +50,7 @@ Item {
         CenTex {
             id: user_tick
             text: answered ? ((q == user_q) ? '√' : 'X') : ' ';
-            font.pixelSize: row.height * 0.75
+            font.pixelSize: height * 0.75
         }
     }
 
@@ -62,76 +66,19 @@ Item {
         easing.amplitude: 3
     }
 
-    // pointless
     Rectangle {
         id: butt
         anchors.fill: parent
-        // NOT final color!!!
-        //color: '#008080' //.'transparent' //'"#00ff00"
-        //color: '#ffffc0'
-        //color: Qt.transparent
         color: 'transparent'
         Behavior on color { ColorAnimation { duration: 100 } }
-
-//        transitions: [
-//            Tran]
-
-        //radius: height * 0.25
-        anchors.margins: 0
-        //width:200
-        Row {
-            // need a few bumps on this - lining the sums up is weird
-            // maybe they should be *meh* -
-
-            // eventually the children should be able to write the program for mulitply.
-            // THAT'S the beautiful dynamic system.
-            id: row
-            height: parent.height
-            Text {
-                height: parent.height
-                text: a
-                verticalAlignment: Text.AlignVCenter
-                font.pixelSize: row.height * 0.75
-                //font.pixelSize: height
-            }
-            QuestionViewText {
-                text: ' ' + op + ' '
-            }
-            QuestionViewText {
-                text: b
-            }
-            QuestionViewText {
-                text: ' = '
-            }
-            QuestionViewText {
-                text: answered ? user_q : ''
-            }
-/*
-            Text {
-                height: parent.height
-                //text: view_state === 'unanswered' ? '???' : q;
-                // duh! put the USER answer in here (live and realtime please)
-                //text: view_state === q;
-                text: q
-                verticalAlignment: Text.AlignVCenter
-                font.pixelSize: row.height * 0.75
-            }*/
-//            Text {
-//                height: parent.height
-//                // should mimic real results
-//                text: '???'
-//                verticalAlignment: Text.AlignVCenter
-//                font.pixelSize: row.height * 0.75
-//            }
-            // want this one at the right hand end.
-            // also, it can be HUGE
-//            Text {
-//                id: user_tick
-//                height: parent.height
-//                text: '√'
-//                verticalAlignment: Text.AlignVCenter
-//                font.pixelSize: row.height * 0.75
-//            }
+        SumHorizontal {
+            anchors.fill: parent
+            // a is bad as it is ambiguous - the other way of doing this is just cheesy
+            // let's try
+            text_a: a
+            text_b: b
+            text_op: op
+            text_q: answered ? user_q : ''
         }
     }
 

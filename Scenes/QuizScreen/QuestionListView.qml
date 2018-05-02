@@ -28,6 +28,14 @@ Item {
         quiz_screen.clear_input();
     }
 
+    function testCurrent() {
+        if (model.get(current_qi).user_q == model.get(current_qi).q) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     function updateCurrentAnswer(text_answer) {
         // err, should this REALL happen here?!
         console.log(text_answer)

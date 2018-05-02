@@ -5,6 +5,7 @@ import QtQuick.Window 2.10
 import QtQuick.Layouts 1.3
 import QtMultimedia 5.9
 import 'Scenes/MainMenu'
+import 'Scenes/QuizScreen'
 
 // put the standard header layout here please.
 Item {
@@ -15,10 +16,17 @@ Item {
     // todo; there's a state machine here...
     // if you want to transition between windows FEEL FREE!!
 
+    // TODO:remove the 40 and replace it with a property or similar
     Header {
         id: header
         anchors.fill: parent
         anchors.bottomMargin: parent.height - 40
+    }
+
+    Item {
+        id: content
+        anchors.fill: parent
+        anchors.topMargin: 40
     }
 
     Item {

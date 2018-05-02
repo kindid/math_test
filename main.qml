@@ -1,6 +1,7 @@
 import QtQuick 2.10
 import QtQuick.Controls 2.2
 import QtQuick.Window 2.10
+import 'Scenes/QuizScreen'
 
 Window {
     visible: true
@@ -14,7 +15,11 @@ Window {
         fillMode: Image.Tile
     }
 
-    ViewTop {
-        id: vt    // remove if this doesn't get much use
+    QuizScreen {
+        anchors.fill: parent
     }
+
+//    ViewTop {
+//        id: vt    // remove if this doesn't get much use
+//    }
 }
