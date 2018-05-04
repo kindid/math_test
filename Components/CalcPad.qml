@@ -26,6 +26,8 @@ Item {
         // internal id only
         id: calc_pad
         // need to be more conventional... probablt
+        // some of these keys are disabled by default
+        // I'm also wondering about just making a row of keys - not sure why
         model: [
             // colours please
             { name:'7', color: '#E8DAEF' },

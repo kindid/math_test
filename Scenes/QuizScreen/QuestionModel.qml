@@ -15,6 +15,8 @@ ListModel {
             var a = Math.floor(Math.random() * 10)
             //var a = i
             var b = Math.floor(Math.random() * 10)
+            var q = a + b
+            console.log('i = ' + i + ' a = ' + a + ' b = ' + b + ' q = ' + q)
             // how hard or easy do you want it?
             append({
                        'a': a,      // JSON note - just use ****ing equals syntax...

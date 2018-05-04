@@ -50,6 +50,7 @@ Item {
         CenTex {
             id: user_tick
             text: answered ? ((q == user_q) ? '√' : 'X') : ' ';
+            //text: 'u=' + user_q + ' q=' + q //answered ? ((q == user_q) ? '√' : 'X') : ' ';
             font.pixelSize: height * 0.75
         }
     }

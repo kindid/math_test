@@ -50,6 +50,7 @@ Item {
                 anchors.fill: parent
                 anchors.topMargin: parent.height / 2
 
+                // move to another Component and have a 'stringChanged' or similar signal
                 CalcPad {
                     id: calc_pad
                     width: Math.min(parent.width, parent.height)
@@ -64,7 +65,11 @@ Item {
                             if (cInput.charAt(0) == '-') {
                                 cInput = cInput.substring(1);
                             } else {
-                                cInput = '-' + cInput
+                                // check the string has any chars or you'll get 'NaN'
+                                // OTOH you should probably remember something or this gets tedious fast
+                                if (cInput.length) {
+                                    cInput = '-' + cInput
+                                }
                             }
                             lv_question.updateCurrentAnswer(cInput)
                         } else if (key === '?') {

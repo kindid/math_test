@@ -29,7 +29,8 @@ Item {
     }
 
     function testCurrent() {
-        if (model.get(current_qi).user_q == model.get(current_qi).q) {
+        console.log('testCurrent ', current_qi)
+        if (model.get(current_qi).user_q === model.get(current_qi).q) {
             return true;
         } else {
             return false;
@@ -38,8 +39,9 @@ Item {
 
     function updateCurrentAnswer(text_answer) {
         // err, should this REALL happen here?!
-        console.log(text_answer)
-        console.log(current_qi)
+        //arguments.callee. all sorts of crap in here
+        console.log('text_answer', text_answer)
+        console.log('current_qi', current_qi)
 
         if (current_qi >= 0) {
             // no text - mark as unmarked
@@ -63,7 +65,7 @@ Item {
         var marks = 0
         for (var v = 0; v < model.count; v++) {
             if (model.get(v).answered) {
-                if (model.get(v).q == model.get(v).user_q) {
+                if (model.get(v).q === model.get(v).user_q) {
                     marks++
                 }
             }
@@ -93,7 +95,8 @@ Item {
         onCurrentItemChanged: {
             console.log(lv_question.currentIndex)
             if (current_qi >= 0) {
-                questions.setProperty(current_qi, 'q', 777);
+            // FUCK THIS! This is causing a bug cause I'm stupid
+                //questions.setProperty(current_qi, 'q', 777);
             }
         }
 
