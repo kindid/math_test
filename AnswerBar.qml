@@ -1,5 +1,6 @@
 import QtQuick 2.0
 
+// TODO:Dead - remove
 Rectangle {
     property alias text: text.text
     color:"#ff0000"

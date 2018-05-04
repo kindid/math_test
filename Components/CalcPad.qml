@@ -11,7 +11,7 @@ import QtQuick 2.0
 // you want a square box - nice and easy
 
 Item {
-    anchors.fill: parent
+//    anchors.fill: parent
     signal key(string key)
 //    Rectangle {
 //        anchors.fill: parent

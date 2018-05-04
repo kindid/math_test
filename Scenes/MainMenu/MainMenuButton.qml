@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import '../../Components'
 
 Rectangle {
     property alias  text: text_id.text

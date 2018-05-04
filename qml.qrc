@@ -32,7 +32,7 @@
         <file>images/key_0.png</file>
         <file>images/grid.png</file>
         <file>images/question_block.png</file>
-        <file>CenTex.qml</file>
+        <file>Components/CenTex.qml</file>
         <file>ViewTop.qml</file>
         <file>Header.qml</file>
         <file>Footer.qml</file>
