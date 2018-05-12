@@ -1,0 +1,15 @@
+
+
+horizontal sum
+    it's a list view - kinda sucks [doesn't have to be repeater/column will work fine]
+
+i want to try having a gap between the numbers but and underlay of, say, black... why?
+    this borders the selected column... maybe
+
+
+
+
+
+
+
+0123456789abcdefghijklmnopqrstuvwxyz_.?[]'

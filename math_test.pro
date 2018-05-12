@@ -30,4 +30,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    old_main_bits.qml.txt
+    old_main_bits.qml.txt \
+    todo.txt
