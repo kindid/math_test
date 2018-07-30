@@ -62,5 +62,8 @@
         <file>Components/SumVertical.qml</file>
         <file>Components/QuestionViewText.qml</file>
         <file>Scenes/MainMenu/MainMenuButton.qml</file>
+        <file>images/blackboard.jpg</file>
+        <file>images/key_blank_white.png</file>
+        <file>images/key_circle_white.png</file>
     </qresource>
 </RCC>

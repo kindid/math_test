@@ -11,15 +11,16 @@ Window {
 
     Image {
         anchors.fill: parent
-        source: "qrc:/images/grid.png"
+        source: "qrc:/images/blackboard.jpg"
+//        source: "qrc:/images/grid.png"
         fillMode: Image.Tile
     }
 
-    QuizScreen {
-        anchors.fill: parent
-    }
-
-//    ViewTop {
-//        id: vt    // remove if this doesn't get much use
+//    QuizScreen {
+//        anchors.fill: parent
 //    }
+
+    ViewTop {
+        id: vt    // remove if this doesn't get much use
+    }
 }

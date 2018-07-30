@@ -33,7 +33,7 @@ Item {
             { name:'7', color: '#E8DAEF' },
             { name:'8', color: '#E8DAEF' },
             { name:'9', color: '#E8DAEF' },
-            { name:' ', color: '#b0b0b0' },
+            { name:'',  color: '#b0b0b0' },
 
             { name:'6', color: '#E8DAEF' },
             { name:'5', color: '#E8DAEF' },
@@ -48,7 +48,7 @@ Item {
             { name:'±', color: '#f8DAEF' },
             { name:'0', color: '#E8DAEF' },
             { name:'.', color: '#b0b0b0' },
-            { name:' ', color: '#b0b0b0' },
+            { name:'',  color: '#b0b0b0' },
         ]
 
         // ****s this ****.
@@ -64,7 +64,7 @@ Item {
             x: Math.floor(index % 4) * Math.min(parent.width, parent.height) / 4
             y: Math.floor(index / 4) * Math.min(parent.width, parent.height) / 4
 
-            source: 'qrc:/images/key_blank.png'
+            source: 'qrc:/images/key_blank_white.png'
             text: modelData.name
             key_name: modelData.name
             color: modelData.color

@@ -1,13 +1,11 @@
 import QtQuick 2.0
 //import '../..'
 
+// todo; pull in better version of this from can't remember...
 Row {
-    // tedious
     property alias text_a: part_a.text
-    property alias color_a: part_a.color
     property alias text_op: part_op.text
     property alias text_b: part_b.text
-    property alias color_b: part_b.color
     property alias text_q: part_q.text
 
     // need a few bumps on this - lining the sums up is weird
@@ -17,19 +15,14 @@ Row {
     // THAT'S the beautiful dynamic system.
     id: row
     height: parent.height
-    // flow?
-    QuestionViewText {
+    Text {
         id: part_a
-        color: color_a
+        height: parent.height
+        text: a
+        verticalAlignment: Text.AlignVCenter
+        font.pixelSize: row.height * 0.75
+        //font.pixelSize: height
     }
-
-//    Text {
-//        height: parent.height
-//        text: a
-//        verticalAlignment: Text.AlignVCenter
-//        font.pixelSize: row.height * 0.75
-//        //font.pixelSize: height
-//    }
     QuestionViewText {
         id: part_op
         text: ' ' + op + ' '

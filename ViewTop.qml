@@ -29,6 +29,7 @@ Item {
         anchors.topMargin: 40
     }
 
+    // wow. this is
     Item {
         id: child_picker
         anchors.fill: parent
@@ -39,7 +40,7 @@ Item {
                 child_picker.visible = false
             }
         }
-
+        visible: false
     }
 
 
@@ -62,10 +63,11 @@ Item {
     QuizScreen {
         id: quiz_screen
         anchors.fill: parent
+        anchors.topMargin: 40
         //            anchors.leftMargin: -fullscreen.width
         //            anchors.rightMargin: 0
         z: -100
-        visible: false
+        visible: true
         scale:1
     }
 
@@ -83,7 +85,7 @@ Item {
             console.log("BOOM")
             RSG.visible = false
         }
-        visible:true
+        visible:false
     }
 
     // do a countdown - with lights or something

@@ -44,7 +44,7 @@ Item {
 //        }
         Image {
             anchors.fill: parent
-            source: 'qrc:/images/key_circle.png'
+            source: 'qrc:/images/key_circle_white.png'
         }
 
         CenTex {
@@ -52,6 +52,7 @@ Item {
             text: answered ? ((q == user_q) ? '√' : 'X') : ' ';
             //text: 'u=' + user_q + ' q=' + q //answered ? ((q == user_q) ? '√' : 'X') : ' ';
             font.pixelSize: height * 0.75
+            color: '#ffffff'
         }
     }
 
@@ -77,7 +78,9 @@ Item {
             // a is bad as it is ambiguous - the other way of doing this is just cheesy
             // let's try
             text_a: a
+            color_a: '#ffffff'
             text_b: b
+            color_b: '#ffffff'
             text_op: op
             text_q: answered ? user_q : ''
         }
